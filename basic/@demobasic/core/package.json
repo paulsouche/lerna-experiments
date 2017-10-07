@@ -1,0 +1,57 @@
+{
+  "name": "@demobasic/core",
+  "version": "1.0.0",
+  "description": "",
+  "main": "umd/index.js",
+  "scripts": {
+    "build": "rollup -c -o umd/index.js && npm run docs",
+    "docs": "typedoc index.ts",
+    "lint": "tslint \"**/*.ts\" \"**/*.js\" -e \"node_modules/**\" -e \"coverage/**\" -e \"docs/**\" -e \"umd/**\" -e \"dist/**\"",
+    "outdated": "npm outdated || true",
+    "start": "tsc -p . -w",
+    "sync": "npm i && npm update",
+    "test": "nyc mocha --require ts-node \"test/**/*.ts\""
+  },
+  "author": "Paul Souche <paul.souche@gmail.com>",
+  "license": "MIT",
+  "types": "index.ts",
+  "devDependencies": {
+    "@types/chai": "*",
+    "@types/mocha": "*",
+    "@types/node": "*",
+    "chai": "^4.0.0",
+    "mocha": "^4.0.0",
+    "nyc": "^11.0.0",
+    "rollup": "^0.50.0",
+    "rollup-plugin-typescript2": "^0.7.0",
+    "rollup-pluginutils": "^2.0.0",
+    "ts-node": "^3.0.0",
+    "tslint": "^5.0.0",
+    "typedoc": "^0.9.0",
+    "typescript": "^2.0.0"
+  },
+  "nyc": {
+    "include": [
+      "lib/**/*.ts"
+    ],
+    "exclude": [
+      "coverage",
+      "dist",
+      "docs",
+      "node_modules",
+      "umd"
+    ],
+    "extension": [
+      ".ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ],
+    "reporter": [
+      "json",
+      "html"
+    ],
+    "all": true,
+    "sourceMap": true
+  }
+}

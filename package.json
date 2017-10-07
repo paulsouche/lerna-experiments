@@ -1,0 +1,10 @@
+{
+  "name": "lerna-experiments",
+  "version": "1.0.0",
+  "keywords": [
+    "lerna",
+    "TypeScript"
+  ],
+  "author": "Paul Souche <paul.souche@gmail.com>",
+  "license": "MIT"
+}
