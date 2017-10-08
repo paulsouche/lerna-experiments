@@ -1,0 +1,47 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "declaration": true,
+    "outDir": "dist",
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "moduleResolution": "node",
+    "typeRoots": [
+      "./node_modules/@types"
+    ],
+    "types": [
+      "mocha",
+      "node"
+    ]
+  },
+  "files": [
+    "./index.ts"
+  ],
+  "exclude": [
+    "coverage",
+    "dist",
+    "docs",
+    "node_modules",
+    "umd"
+  ],
+  "typedocOptions": {
+    "mode": "modules",
+    "out": "docs",
+    "exclude": "test",
+    "theme": "default",
+    "ignoreCompilerErrors": true,
+    "excludePrivate": true,
+    "excludeNotExported": true,
+    "target": "es5",
+    "moduleResolution": "node",
+    "preserveConstEnums": true,
+    "stripInternal": true,
+    "suppressExcessPropertyErrors": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "module": "commonjs"
+  }
+}

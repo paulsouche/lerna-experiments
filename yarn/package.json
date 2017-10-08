@@ -1,0 +1,22 @@
+{
+  "name": "demoyarn",
+  "private": true,
+  "devDependencies": {
+    "@types/chai": "*",
+    "@types/mocha": "*",
+    "@types/node": "*",
+    "chai": "^4.0.0",
+    "mocha": "^4.0.0",
+    "nyc": "^11.0.0",
+    "rollup": "^0.50.0",
+    "rollup-plugin-typescript2": "^0.7.0",
+    "rollup-pluginutils": "^2.0.0",
+    "ts-node": "^3.0.0",
+    "tslint": "^5.0.0",
+    "typedoc": "^0.9.0",
+    "typescript": "^2.0.0"
+  },
+  "workspaces": [
+    "@demoyarn/*"
+  ]
+}

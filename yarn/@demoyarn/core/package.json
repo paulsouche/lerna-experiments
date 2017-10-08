@@ -1,0 +1,40 @@
+{
+  "name": "@demoyarn/core",
+  "version": "1.0.0",
+  "description": "",
+  "main": "umd/index.js",
+  "scripts": {
+    "build": "rollup -c -o umd/index.js && yarn run docs",
+    "docs": "typedoc index.ts",
+    "lint": "tslint \"**/*.ts\" \"**/*.js\" -e \"node_modules/**\" -e \"coverage/**\" -e \"docs/**\" -e \"umd/**\" -e \"dist/**\"",
+    "start": "tsc -p . -w",
+    "test": "nyc mocha --require ts-node \"test/**/*.ts\""
+  },
+  "author": "Paul Souche <paul.souche@gmail.com>",
+  "license": "MIT",
+  "types": "umd/index.d.ts",
+  "nyc": {
+    "include": [
+      "lib/**/*.ts"
+    ],
+    "exclude": [
+      "coverage",
+      "dist",
+      "docs",
+      "node_modules",
+      "umd"
+    ],
+    "extension": [
+      ".ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ],
+    "reporter": [
+      "json",
+      "html"
+    ],
+    "all": true,
+    "sourceMap": true
+  }
+}
