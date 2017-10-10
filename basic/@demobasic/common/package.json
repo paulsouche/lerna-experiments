@@ -1,6 +1,6 @@
 {
   "name": "@demobasic/common",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "umd/index.js",
   "scripts": {
@@ -16,7 +16,7 @@
   "license": "MIT",
   "types": "index.ts",
   "dependencies": {
-    "@demobasic/core": "1.0.0"
+    "@demobasic/core": "^1.0.1"
   },
   "devDependencies": {
     "@types/chai": "*",
